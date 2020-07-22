@@ -9,9 +9,9 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    function Type(value) {
+    function Undefined(value) {
         return value === undefined;
     }
-    exports.default = Type;
+    exports.default = Undefined;
 });
-//# sourceMappingURL=type.js.map
+//# sourceMappingURL=undefined.js.map

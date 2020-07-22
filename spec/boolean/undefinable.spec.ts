@@ -2,8 +2,23 @@ import Undefinable from "../../dist/boolean/undefinable";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
-describe('valid', () => {
+describe(`compiler compatible`,function() {
 
+    let a : unknown = '1';
+
+    if(Undefinable(a, Array.isArray)) {
+
+        let n : undefined|any[] = a;
+
+    } else {
+
+        // @ts-expect-error
+        let n : undefined|any[] = a;
+    }
+
+});
+
+describe('valid', () => {
 
     it("value", () => {
 

@@ -4,14 +4,14 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./type"], factory);
+        define(["require", "exports", "./undefined"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const type_1 = require("./type");
+    const undefined_1 = require("./undefined");
     function Undefinable(value, notUndefined) {
-        return type_1.default(value) || notUndefined(value);
+        return undefined_1.default(value) || notUndefined(value);
     }
     exports.default = Undefinable;
 });

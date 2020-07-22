@@ -1,7 +1,10 @@
-import TypeUndefined from './type';
+import TypeUndefined from './undefined';
 
-export default function Undefinable<Type>(value : any, notUndefined : (value : any) => value is Type) : value is Type|undefined {
-    
+export default function Undefinable<Type>(
+    value : unknown,
+    notUndefined : (value : unknown) => value is Type
+) : value is Type|undefined {
+
     return TypeUndefined(value) || notUndefined(value);
 }
 
