@@ -1,1 +1,1 @@
-export default function String(valid: boolean, value: unknown): string;
+export default function Undefined(valid: boolean, value: unknown): string;

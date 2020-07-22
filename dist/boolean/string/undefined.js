@@ -9,7 +9,7 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    function String(valid, value) {
+    function Undefined(valid, value) {
         if (valid) {
             return `value is undefined`;
         }
@@ -17,6 +17,6 @@
             return `value is not undefined`;
         }
     }
-    exports.default = String;
+    exports.default = Undefined;
 });
 //# sourceMappingURL=undefined.js.map
