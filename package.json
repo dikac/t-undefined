@@ -3,6 +3,11 @@
   "version": "0.2.6",
   "description": "Typescript undefined",
   "dependencies": {
+    "@dikac/t-function": "^0.9.3",
+    "@dikac/t-message": "^0.6.2",
+    "@dikac/t-validatable": "^0.17.1",
+    "@dikac/t-validator": "^0.9.3",
+    "@dikac/t-value": "^0.8.12",
     "@dikac/deployer": "^0.1.5"
   },
   "devDependencies": {
