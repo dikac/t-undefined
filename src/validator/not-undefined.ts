@@ -9,7 +9,7 @@ export type Return<Msg> =
     Readonly<Validatable<true> & Message<Msg> & Value<unknown>> |
     Readonly<Validatable<false> & Message<Msg> & Value<undefined>>;
 
-export default class Undefined<Msg>
+export default class NotUndefined<Msg>
     implements
         Validator<number, Return<Msg>>,
         Message<Function<[Readonly<Value> & Readonly<Validatable>], Msg>>

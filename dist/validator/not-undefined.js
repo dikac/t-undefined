@@ -10,7 +10,7 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     const not_undefined_1 = require("../validatable/not-undefined");
-    class Undefined {
+    class NotUndefined {
         constructor(message) {
             this.message = message;
         }
@@ -18,6 +18,6 @@
             return not_undefined_1.default(value, this.message);
         }
     }
-    exports.default = Undefined;
+    exports.default = NotUndefined;
 });
 //# sourceMappingURL=not-undefined.js.map
