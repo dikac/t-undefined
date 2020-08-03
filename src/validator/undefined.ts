@@ -4,14 +4,12 @@ import Message from "@dikac/t-message/message";
 import Value from "@dikac/t-value/value";
 import UndefinedValidatable from "../validatable/undefined";
 import Function from "@dikac/t-function/function";
-
-export type Return<Msg> =
-    Readonly<Validatable<true> & Message<Msg> & Value<undefined>> |
-    Readonly<Validatable<false> & Message<Msg> & Value<unknown>>;
+import Return from "@dikac/t-validator/return/return";
+import Instance from "@dikac/t-validator/parameter/instance/instance";
 
 export default class Undefined<Msg>
     implements
-        Validator<number, Return<Msg>>,
+        Validator<unknown, undefined, Readonly<Instance<unknown, Msg>>>,
         Message<Function<[Readonly<Value> & Readonly<Validatable>], Msg>>
 {
 
@@ -20,8 +18,8 @@ export default class Undefined<Msg>
     ) {
     }
 
-    validate(value: unknown): Return<Msg> {
+    validate<Argument extends unknown>(value: Argument): Return<unknown, Argument, undefined, Readonly<Instance<unknown, Msg>>> {
 
-        return UndefinedValidatable(value, this.message);
+        return <Return<unknown, Argument, undefined, Readonly<Instance<unknown, Msg>>>> UndefinedValidatable(value, this.message);
     }
 }

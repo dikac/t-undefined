@@ -30,7 +30,6 @@ describe(`compiler compatible`,function() {
 
         if(validatable.valid) {
 
-            // @ts-expect-error
             let string : undefined = validatable.value;
             fail('validatable.valid should false')
 
