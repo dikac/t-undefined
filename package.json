@@ -1,18 +1,17 @@
 {
   "name": "@dikac/t-undefined",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Typescript undefined",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
     "@dikac/t-function": "^0.11.2",
     "@dikac/t-message": "^0.8.2",
-    "@dikac/t-validatable": "^0.18.1",
-    "@dikac/t-validator": "^0.13.3",
+    "@dikac/t-validatable": "^0.18.2",
+    "@dikac/t-validator": "^0.14.0",
     "@dikac/t-value": "^0.11.3"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.12",
-    "@types/node": "^12.12.53",
     "cpy-cli": "^3.1.1",
     "jasmine": "^3.6.1",
     "jasmine-ts-console-reporter": "^3.1.1",
