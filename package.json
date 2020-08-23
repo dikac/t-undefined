@@ -8,7 +8,8 @@
     "@dikac/t-message": "^0.8.2",
     "@dikac/t-validatable": "^0.18.3",
     "@dikac/t-validator": "^0.15.0",
-    "@dikac/t-value": "^0.12.0"
+    "@dikac/t-value": "^0.12.0",
+    "ts-toolbelt": "^6.15.5"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.12",
