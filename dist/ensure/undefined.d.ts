@@ -1,2 +1,1 @@
-import Function from "@dikac/t-function/function";
-export default function Undefined(value: unknown, error?: Function<[unknown], Error>): undefined;
+export default function Undefined(value: unknown, error?: (value: unknown) => Error): undefined;

@@ -1,2 +1,1 @@
-import Fn from "@dikac/t-function/function";
-export default function Undefined(value: unknown, error?: Fn<[unknown], Error>): asserts value is undefined;
+export default function Undefined(value: unknown, error?: (value: unknown) => Error): asserts value is undefined;
