@@ -1,8 +1,8 @@
 import Value from "@dikac/t-value/value";
 import Validatable from "@dikac/t-validatable/validatable";
-import NotUndefinedMessage from "../../boolean/string/not-undefined";
+import NotUndefinedMessage from "../../assert/string/not-undefined";
 
-export default function NotUndefined(object : Readonly<Value & Validatable>) : string {
+export default function NotUndefined(object : Readonly<Validatable>) : string {
 
-    return NotUndefinedMessage(object.valid, object.value)
+    return NotUndefinedMessage(object.valid)
 }

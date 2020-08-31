@@ -1,8 +1,8 @@
 import Value from "@dikac/t-value/value";
 import Validatable from "@dikac/t-validatable/validatable";
-import UndefinedMessage from "../../boolean/string/undefined";
+import UndefinedMessage from "../../assert/string/undefined";
 
-export default function Undefined(object : Readonly<Value & Validatable>) : string {
+export default function Undefined(object : Readonly<Validatable>) : string {
 
-    return UndefinedMessage(object.valid, object.value)
+    return UndefinedMessage(object.valid)
 }

@@ -1,6 +1,6 @@
-import NotUndefinedType from "../../boolean/string/not-undefined";
+import NotUndefinedType from "../string/not-undefined";
 
-export default function Undefined(value : unknown) : Error {
+export default function Undefined(subject : string = '') : Error {
 
-    return new Error(NotUndefinedType(false, value))
+    return new Error(NotUndefinedType(false, subject))
 }

@@ -1,6 +1,6 @@
-import UndefinedType from "../../boolean/string/undefined";
+import UndefinedType from "../string/undefined";
 
-export default function Undefined(value : unknown) : Error {
+export default function Undefined(subject : string = '') : Error {
 
-    return new Error(UndefinedType(false, value))
+    return new Error(UndefinedType(false, subject))
 }
