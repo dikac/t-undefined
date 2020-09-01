@@ -11,7 +11,7 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     const not_undefined_1 = require("../../assert/string/not-undefined");
     function NotUndefined(object) {
-        return not_undefined_1.default(object.valid);
+        return not_undefined_1.default(object.valid, object.value);
     }
     exports.default = NotUndefined;
 });

@@ -11,7 +11,7 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     const undefined_1 = require("../../assert/string/undefined");
     function Undefined(object) {
-        return undefined_1.default(object.valid);
+        return undefined_1.default(object.valid, object.value);
     }
     exports.default = Undefined;
 });
