@@ -15,17 +15,17 @@ export default function NotUndefined(
     conversion : (value:unknown)=>string = value=>typeof value
 ) : string {
 
-    let sentence = new SentencesIs(valid);
-    sentence.expectation =  {
+    let sentence = SentencesIs(valid);
+    sentence.predicate =  {
         invalid : ['must not'],
         valid : ['is not'],
     };
-    sentence.type.push('undefined');
-    sentence.value.push(subject);
+    sentence.object.push('undefined');
+    sentence.subject.push(subject);
 
     if(!valid) {
 
-        sentence.value.push(conversion(value));
+        sentence.subject.push(conversion(value));
     }
 
     return sentence.message;

@@ -19,15 +19,15 @@
      * @param conversion
      */
     function NotUndefined(valid, value, subject = 'type', conversion = value => typeof value) {
-        let sentence = new sentences_is_1.default(valid);
-        sentence.expectation = {
+        let sentence = sentences_is_1.default(valid);
+        sentence.predicate = {
             invalid: ['must not'],
             valid: ['is not'],
         };
-        sentence.type.push('undefined');
-        sentence.value.push(subject);
+        sentence.object.push('undefined');
+        sentence.subject.push(subject);
         if (!valid) {
-            sentence.value.push(conversion(value));
+            sentence.subject.push(conversion(value));
         }
         return sentence.message;
     }

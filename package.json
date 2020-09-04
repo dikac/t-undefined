@@ -1,12 +1,12 @@
 {
   "name": "@dikac/t-undefined",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "description": "Typescript undefined",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
     "@dikac/t-function": "^0.12.3",
-    "@dikac/t-message": "^0.10.0",
-    "@dikac/t-string": "^0.12.16",
+    "@dikac/t-message": "^0.10.1",
+    "@dikac/t-string": "^0.13.0",
     "@dikac/t-validatable": "^0.18.6",
     "@dikac/t-validator": "^0.16.3",
     "@dikac/t-value": "^0.12.4",
