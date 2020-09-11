@@ -4,25 +4,18 @@ it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 let data = new Map<[boolean, any, string?], string>();
 
-data.set([true, 'undefined'], 'type is undefined');
-data.set([true, 'undefined', 'value'], 'value is undefined');
-data.set([true, []], 'type is undefined');
-data.set([true, {}], 'type is undefined');
+it('true', ()=>{
 
-data.set([false, 'undefined'], 'type string is not undefined');
-data.set([false, 'undefined', 'value'], 'value string is not undefined');
-data.set([false, []], 'type object is not undefined');
-data.set([false, {}], 'type object is not undefined');
+    expect(Undefined_(true, {}, 'value')).toBe(
+        'value is undefined.'
+    );
 
+});
 
-let i = 0;
-for(let [args, message] of data) {
+it('false', ()=>{
 
-    it(`test data[${i}]`, ()=>{
+    expect(Undefined_(false, {}, 'value')).toBe(
+        'value must undefined, actual object.'
+    );
 
-        expect(Undefined_(...args)).toBe(message);
-
-    });
-
-    i++;
-}
+});

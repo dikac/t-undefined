@@ -1,4 +1,4 @@
-import SentencesIs from "@dikac/t-string/message/sentences-is";
+import SentencesIs from "@dikac/t-string/message/sentences-must";
 
 /**
  * string intended for undefined message
@@ -16,13 +16,16 @@ export default function Undefined(
 ) : string {
 
     let sentence = SentencesIs(valid);
-    sentence.object.push('undefined');
+    sentence.expect.push('undefined');
     sentence.subject.push(subject);
+
+    sentence.comma.push('expect');
 
     if(!valid) {
 
-        sentence.subject.push(conversion(value));
+        sentence.actual.push('actual', conversion(value));
     }
 
     return sentence.message;
 }
+

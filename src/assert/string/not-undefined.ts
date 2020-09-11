@@ -1,4 +1,4 @@
-import SentencesIs from "@dikac/t-string/message/sentences-is";
+import SentencesIs from "@dikac/t-string/message/sentences-must";
 
 /**
  * string intended for not undefined message
@@ -6,27 +6,19 @@ import SentencesIs from "@dikac/t-string/message/sentences-is";
  * @param valid
  * @param value
  * @param subject
- * @param conversion
  */
 export default function NotUndefined(
     valid : boolean,
     value : unknown,
     subject : string = 'type',
-    conversion : (value:unknown)=>string = value=>typeof value
 ) : string {
 
     let sentence = SentencesIs(valid);
-    sentence.predicate =  {
-        invalid : ['must not'],
-        valid : ['is not'],
-    };
-    sentence.object.push('undefined');
+
+    sentence.expect.push('undefined');
+    sentence.reject = ['must not'];
+    sentence.accept = ['is not'];
     sentence.subject.push(subject);
-
-    if(!valid) {
-
-        sentence.subject.push(conversion(value));
-    }
 
     return sentence.message;
 }
