@@ -1,20 +1,7 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
-    }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../assert/not-undefined", "../assert/throwable/not-undefined"], factory);
-    }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    const not_undefined_1 = require("../assert/not-undefined");
-    const not_undefined_2 = require("../assert/throwable/not-undefined");
-    function NotUndefined(value, error = not_undefined_2.default) {
-        not_undefined_1.default(value, error);
-        return value;
-    }
-    exports.default = NotUndefined;
-});
+import AssertNotUndefined from "../assert/not-undefined";
+import NotUndefinedError from "../assert/throwable/not-undefined";
+export default function NotUndefined(value, error = NotUndefinedError) {
+    AssertNotUndefined(value, error);
+    return value;
+}
 //# sourceMappingURL=not-undefined.js.map

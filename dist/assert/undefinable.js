@@ -1,28 +1,15 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
-    }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../boolean/undefined"], factory);
-    }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    const undefined_1 = require("../boolean/undefined");
-    function Undefinable(value, assert, error) {
-        try {
-            if (!undefined_1.default(value)) {
-                assert(value);
-            }
-        }
-        catch (e) {
-            if (error) {
-                throw error(value);
-            }
-            throw e;
+import Guard from "../boolean/undefined";
+export default function Undefinable(value, assert, error) {
+    try {
+        if (!Guard(value)) {
+            assert(value);
         }
     }
-    exports.default = Undefinable;
-});
+    catch (e) {
+        if (error) {
+            throw error(value);
+        }
+        throw e;
+    }
+}
 //# sourceMappingURL=undefinable.js.map
