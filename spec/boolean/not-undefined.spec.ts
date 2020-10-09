@@ -4,16 +4,16 @@ it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
-    let a : unknown = '1';
+    let a : undefined|string = '1';
 
     if(NotUndefined(a)) {
 
         // @ts-expect-error
         let n : undefined = a;
+        let s : string = a;
 
     } else {
 
-        // @ts-expect-error
         let n : undefined = a;
     }
 
