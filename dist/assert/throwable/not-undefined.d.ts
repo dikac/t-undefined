@@ -1,1 +1,1 @@
-export default function Undefined(subject?: string): Error;
+export default function NotUndefined(subject?: string): Error;

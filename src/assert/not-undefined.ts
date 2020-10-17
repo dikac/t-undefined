@@ -3,7 +3,7 @@ import Callback from "@dikac/t-function/assert/callback";
 import NotUndefinedError from "./throwable/not-undefined";
 import {Union} from "ts-toolbelt"
 
-export default function Undefined<Type>(
+export default function NotUndefined<Type>(
     value : Type,
     error : (vaule:unknown)=>Error = NotUndefinedError
 ) : asserts value is Union.Exclude<Type, undefined> {
